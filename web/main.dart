@@ -1,8 +1,18 @@
-// Copyright (c) 2015, <your name>. All rights reserved. Use of this source code
+// Copyright (c) 2015, AVOIVO. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
-import 'dart:html';
+import 'package:logging/logging.dart';
+import 'package:angular/application_factory.dart';
+import 'package:coveralls/app.dart';
 
-void main() {
-  querySelector('#output').text = 'Your Dart app is running.';
+main() async{
+
+  Logger.root.level = Level.FINEST;
+  Logger.root.onRecord.listen((LogRecord r) { print(r.message); });
+
+  
+  applicationFactory()
+    .addModule(new AppModule())
+    .run();
+
 }
