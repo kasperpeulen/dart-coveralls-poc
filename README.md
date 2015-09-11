@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/avoivo/dart-coveralls-poc/badge.svg?branch=master&service=github)](https://coveralls.io/github/avoivo/dart-coveralls-poc?branch=master)
+
 # Uber-simple web app
 
 An absolute bare-bones web app. This web app serves the purpose of a proof of concept on using coveralls.
