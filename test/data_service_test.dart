@@ -1,10 +1,13 @@
 import 'package:guinness/guinness.dart';
 import 'package:angular/angular.dart';
 import 'package:angular/mock/module.dart';
+import 'package:unittest/unittest.dart' hide expect;
+import 'package:unittest/html_config.dart';
 
 import '../lib/data_service.dart';
 
 main() {
+  useHtmlConfiguration();
 
   describe("DataService", () {
 
