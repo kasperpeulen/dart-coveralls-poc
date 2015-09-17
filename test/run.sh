@@ -1,3 +1,5 @@
+sudo start xvfb
+
 #!/bin/bash -e
 
 # run a set of Dart Unit tests that
