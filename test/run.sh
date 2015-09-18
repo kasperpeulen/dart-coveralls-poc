@@ -1,3 +1,5 @@
+pub global activate --source git https://github.com/avoivo/coverage2coveralls.git
+
 sudo start xvfb
 
 which content_shell
@@ -14,7 +16,7 @@ fi
 
 # run a set of Dart Unit tests that
 # rely on the the DOM
-results=$(content_shell --args --dump-render-tree -remote-debugging-port=9991  test/data_service_test.html)
+results=$(content_shell --args -remote-debugging-port=9991  test/data_service_test.html)
 echo -e "$results"
 
 # check to see if DumpRenderTree tests
@@ -30,8 +32,6 @@ fi
 #  then exit 1
 #fi
 
-
-pub global activate --source git https://github.com/avoivo/coverage2coveralls.git
 
 pub global run coverage2coveralls -t $TOKEN -p 9991
 
