@@ -30,6 +30,9 @@ fi
 #  then exit 1
 #fi
 
-pub global activate dart_coveralls
+
+pub global activate --source git https://github.com/avoivo/coverage2coveralls.git
+
+pub global run coverage2coveralls -t $TOKEN -p 9991
 
 exit 0
