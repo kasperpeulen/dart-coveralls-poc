@@ -14,6 +14,11 @@ fi
 
 #!/bin/bash -e
 
+# run coveralls on background
+coveralls=$(pub global run coverage2coveralls -t $TOKEN -r)
+echo -e "$coveralls"
+
+
 # run a set of Dart Unit tests that
 # rely on the the DOM
 results=$(content_shell --args -remote-debugging-port=9991  test/data_service_test.html)
@@ -33,6 +38,5 @@ fi
 #fi
 
 
-pub global run coverage2coveralls -t $TOKEN -p 9991
 
 exit 0
