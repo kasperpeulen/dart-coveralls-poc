@@ -14,7 +14,7 @@ fi
 
 # run a set of Dart Unit tests that
 # rely on the the DOM
-results=$(content_shell --args --dump-render-tree data_service_test.html)
+results=$(content_shell --args --dump-render-tree test/data_service_test.html)
 echo -e "$results"
 
 # check to see if DumpRenderTree tests
