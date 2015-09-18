@@ -4,7 +4,7 @@ sudo start xvfb
 
 # run a set of Dart Unit tests that
 # rely on the the DOM
-results=$(DumpRenderTree test/ToDoApp_test.html)
+results=$(DumpRenderTree test/data_service_test.html)
 echo -e "$results"
 
 # check to see if DumpRenderTree tests
