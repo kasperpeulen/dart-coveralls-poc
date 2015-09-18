@@ -15,7 +15,7 @@ fi
 #!/bin/bash -e
 
 # run coveralls on background
-coveralls=$(pub global run coverage2coveralls -t $TOKEN -r)
+coveralls=$(pub global run coverage2coveralls -t $TOKEN -r &)
 echo -e "$coveralls"
 
 
