@@ -14,7 +14,7 @@ fi
 
 # run a set of Dart Unit tests that
 # rely on the the DOM
-results=$(content_shell --args --dump-render-tree test/data_service_test.html)
+results=$(content_shell --args --dump-render-tree -remote-debugging-port=9991  test/data_service_test.html)
 echo -e "$results"
 
 # check to see if DumpRenderTree tests
@@ -29,5 +29,7 @@ fi
 #if [[ "$results" != "" ]]
 #  then exit 1
 #fi
+
+pub global activate dart_coveralls
 
 exit 0
