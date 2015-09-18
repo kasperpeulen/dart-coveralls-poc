@@ -21,7 +21,7 @@ echo -e "$coveralls"
 
 # run a set of Dart Unit tests that
 # rely on the the DOM
-results=$(content_shell --args -remote-debugging-port=9991  test/data_service_test.html)
+results=$(timeout 30 content_shell --args -remote-debugging-port=9991  test/data_service_test.html)
 echo -e "$results"
 
 # check to see if DumpRenderTree tests
