@@ -34,14 +34,15 @@ fi
 #fi
 
 
+# run coveralls on background
+coveralls=$(pub global run coverage2coveralls -t $TOKEN -r &)
+echo -e "$coveralls"
+
+
 results=$(timeout 30 content_shell -remote-debugging-port=9991  test/data_service_test.html &)
 echo -e "$results"
 
 
-
-# run coveralls on background
-coveralls=$(pub global run coverage2coveralls -t $TOKEN -r)
-echo -e "$coveralls"
 
 
 
