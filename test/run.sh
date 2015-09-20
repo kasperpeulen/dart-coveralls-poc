@@ -35,7 +35,7 @@ fi
 
 
 
-results=$(content_shell -remote-debugging-port=9991  test/data_service_test.html)
+results=$(content_shell -remote-debugging-port=9991  test/data_service_test.html &)
 echo -e "$results"
 
 
