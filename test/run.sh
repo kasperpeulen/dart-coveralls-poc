@@ -35,15 +35,15 @@ fi
 
 
 
-# results=$(timeout 30 content_shell -remote-debugging-port=9991  test/data_service_test.html)
-# echo -e "$results"
+results=$(content_shell -remote-debugging-port=9991  test/data_service_test.html)
+echo -e "$results"
 
 
 # run coveralls on background
 # coveralls=$(pub global run coverage2coveralls -t $TOKEN -r)
 # echo -e "$coveralls"
 
-content_shell -remote-debugging-port=9991  test/data_service_test.html
+# content_shell -remote-debugging-port=9991  test/data_service_test.html
 pub global run coverage2coveralls -t $TOKEN -r
 
 
