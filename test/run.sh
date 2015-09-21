@@ -46,8 +46,7 @@ fi
 # content_shell -remote-debugging-port=9991  test/data_service_test.html
 #pub global run coverage2coveralls -t $TOKEN -r
 
-sudo npm install -g concurrently
-
-concurrent "timeout 45 content_shell --remote-debugging-port=9991 test/data_service_test.html" "pub global run coverage2coveralls --token=$TOKEN --retry"
+#sudo npm install -g concurrently
+#concurrent "timeout 45 content_shell --remote-debugging-port=9991 test/data_service_test.html" "pub global run coverage2coveralls --token=$TOKEN --retry"
 
 exit 0
