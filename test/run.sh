@@ -17,7 +17,7 @@ fi
 
 # run a set of Dart Unit tests that
 # rely on the the DOM
-results=$(timeout 30 content_shell --args --dump-render-tree -remote-debugging-port=9991  test/data_service_test.html)
+results=$(content_shell --args --dump-render-tree test/data_service_test.html)
 echo -e "$results"
 
 # check to see if DumpRenderTree tests
@@ -46,8 +46,8 @@ fi
 # content_shell -remote-debugging-port=9991  test/data_service_test.html
 #pub global run coverage2coveralls -t $TOKEN -r
 
+npm install -g concurrently
 
-
-
+concurrent "timeout 45 content_shell --remote-debugging-port=9991 test/data_service_test.html" "pub global run coverage2coveralls --token=$TOKEN --retry"
 
 exit 0
