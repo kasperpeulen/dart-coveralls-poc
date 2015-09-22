@@ -1,47 +1,48 @@
-import 'package:guinness/guinness.dart';
+
+import 'package:test/test.dart';
 import 'package:angular/angular.dart';
 import 'package:angular/mock/module.dart';
-//import 'package:unittest/unittest.dart' hide expect;
-import 'package:unittest/html_config.dart';
 
 import '../lib/data_service.dart';
 
+@TestOn("content-shell")
+
 main() {
-  useHtmlConfiguration();
 
-  describe("DataService", () {
 
-    beforeEach(() {
+  group("DataService", () {
+
+    setUp(() {
      setUpInjector();
      module((Module m) => m..bind(DataService));
     });
-    afterEach(tearDownInjector);
+    tearDown(tearDownInjector);
 
     
-    describe("data", () {
+    group("data", () {
 
-      it("should have the initial length of 3", () {
+      test("should have the initial length of 3", () {
         inject((DataService dataService) {
-          expect(dataService.data.length).toEqual(3);
+          expect(dataService.data.length, equals(3));
         });
         
       });
       
     });
 
-    describe("getMoreData", () {
+    group("getMoreData", () {
 
-      it("should have the initial length of 3", () {
+      test("should have the initial length of 3", () {
         inject((DataService dataService) {
-          expect(dataService.getMoreData().length).toEqual(3);
+          expect(dataService.getMoreData().length, equals(3));
         });
         
       });
 
 
-      xit("should fail", () {
-          expect(1).toEqual(2);
-      });
+      test("should fail", () {
+          expect(1, equals(2));
+      }, skip: "Just for demo.");
       
     });
 
@@ -49,7 +50,6 @@ main() {
   });
 
 }
-
 
 
 
