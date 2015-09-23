@@ -5,7 +5,6 @@ import 'package:angular/mock/module.dart';
 
 import '../lib/data_service.dart';
 
-@TestOn("content-shell")
 
 main() {
 
