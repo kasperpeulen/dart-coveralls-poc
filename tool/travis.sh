@@ -1,7 +1,4 @@
-export DISPLAY=:99.0
-sh -e /etc/init.d/xvfb start
 pub run test -p content-shell
-
 
 if [ "$REPO_TOKEN" ]; then
   pub global activate dart_coveralls
