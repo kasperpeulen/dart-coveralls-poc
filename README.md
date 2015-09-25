@@ -1,4 +1,4 @@
-[![Build Status](https://drone.io/github.com/avoivo/dart-coveralls-poc/status.png)](https://drone.io/github.com/avoivo/dart-coveralls-poc/latest)
+[![Build Status](https://travis-ci.org/avoivo/dart-coveralls-poc.svg?branch=master)](https://travis-ci.org/avoivo/dart-coveralls-poc)
 [![Coverage Status](https://coveralls.io/repos/avoivo/dart-coveralls-poc/badge.svg?branch=master&service=github)](https://coveralls.io/github/avoivo/dart-coveralls-poc?branch=master)
 
 # Uber-simple web app
