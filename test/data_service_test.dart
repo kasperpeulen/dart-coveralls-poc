@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 import 'package:angular/angular.dart';
 import 'package:angular/mock/module.dart';
 
-import '../lib/data_service.dart';
+import 'package:coveralls/data_service.dart';
 
 
 main() {
