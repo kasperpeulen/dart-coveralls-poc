@@ -2,4 +2,4 @@ language: dart
 sudo: false
 with_content_shell: true
 script:
-  - tool/travis.sh
+  - ./tool/travis.sh
