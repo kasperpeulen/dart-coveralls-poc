@@ -41,7 +41,7 @@ main() {
 
       test("should fail", () {
           expect(1, equals(2));
-      }/*, skip: "Just for demo."*/);
+      }, skip: "Just for demo.");
       
     });
 
