@@ -4,6 +4,5 @@
 .packages
 .pub/
 build/
-node_modules/
 packages
 pubspec.lock
