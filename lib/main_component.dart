@@ -1,14 +1,16 @@
 library main;
 
-import 'package:angular/angular.dart';
+import 'package:angular2/angular2.dart';
 
 import 'data_service.dart';
 
 @Component(
-    selector: 'main',
-    templateUrl: 'packages/coveralls/main.html',
-    useShadowDom: false
-    )
+    selector: 'main'
+)
+@View(
+  templateUrl: 'main.html',
+  directives: const [NgFor]
+)
 class MainComponent {
 
   DataService _service;

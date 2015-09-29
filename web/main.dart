@@ -2,17 +2,13 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:logging/logging.dart';
-import 'package:angular/application_factory.dart';
-import 'package:coveralls/app.dart';
+import 'package:coveralls/app.dart' as app;
 
 main() async{
 
   Logger.root.level = Level.FINEST;
   Logger.root.onRecord.listen((LogRecord r) { print(r.message); });
 
+  await app.main();
   
-  applicationFactory()
-    .addModule(new AppModule())
-    .run();
-
 }

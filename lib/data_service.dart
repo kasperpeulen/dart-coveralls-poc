@@ -1,6 +1,6 @@
 library data_service;
 
-import 'package:angular/angular.dart';
+import 'package:angular2/angular2.dart';
 
 @Injectable()
 class DataService{

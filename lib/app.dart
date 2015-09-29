@@ -1,17 +1,13 @@
 library app;
 
-import 'package:angular/angular.dart';
+import 'package:angular2/angular2.dart';
 
 import 'main_component.dart';
 import 'data_service.dart';
 
-class AppModule extends Module {
-  AppModule() {
 
-    bind(DataService);
-    bind(MainComponent);
-    
-  }
+main() async {
+  await bootstrap(MainComponent, [DataService]);
 }
 
 

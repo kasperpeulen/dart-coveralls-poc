@@ -1,52 +1,50 @@
 
-import 'package:test/test.dart';
-import 'package:angular/angular.dart';
-import 'package:angular/mock/module.dart';
+import 'package:unittest/html_config.dart';
+import 'package:angular2/angular2.dart';
+import 'package:angular2/test_lib.dart';
 
 import 'package:coveralls/data_service.dart';
 
 
 main() {
 
+  useHtmlConfiguration();
+  //describe should be added in final release
+  // describe("DataService", () {
 
-  group("DataService", () {
-
-    setUp(() {
-     setUpInjector();
-     module((Module m) => m..bind(DataService));
-    });
-    tearDown(tearDownInjector);
+      beforeEachBindings(() => [
+        bind(DataService)
+      ]);
 
     
-    group("data", () {
+  //   describe("data", () {
 
-      test("should have the initial length of 3", () {
-        inject((DataService dataService) {
-          expect(dataService.data.length, equals(3));
+      it("should have the initial length of 3", () {
+        inject([DataService], (dataService) {
+          expect(dataService.data.length).toEqual(3);
+        });
+      });
+      
+  //   });
+
+  //   describe("getMoreData", () {
+
+      it("should have the initial length of 3", () {
+        inject([DataService], (dataService) {
+          expect(dataService.getMoreData().length).toEqual(3);
         });
         
       });
-      
-    });
 
-    group("getMoreData", () {
 
-      test("should have the initial length of 3", () {
-        inject((DataService dataService) {
-          expect(dataService.getMoreData().length, equals(3));
-        });
-        
+      xit("should fail", () {
+          expect(1).toEqual(2);
       });
-
-
-      test("should fail", () {
-          expect(1, equals(2));
-      }, skip: "Just for demo.");
       
-    });
+  //   });
 
     
-  });
+  // });
 
 }
 
