@@ -5,6 +5,7 @@
 .pub/
 build/
 node_modules/
+shippable/
 packages
 pubspec.lock
 npm-debug.log
