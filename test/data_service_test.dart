@@ -34,7 +34,7 @@ main() {
       });
 
 
-      xit("should fail", () {
+      it("should fail", () {
           expect(1).toEqual(2);
       });
       
