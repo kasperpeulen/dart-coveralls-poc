@@ -10,9 +10,9 @@ before_install:
   - chmod +x ./tool/shippable.sh
 
 # Create directories for test and coverage reports
-# before_script:
-#  - mkdir -p shippable/testresults
-#  - mkdir -p shippable/codecoverage
+before_script:
+ - mkdir -p shippable/testresults
+ - mkdir -p shippable/codecoverage
 
 # Running the tests with grunt
 script:

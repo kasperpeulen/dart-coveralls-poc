@@ -9,7 +9,8 @@
   "devDependencies": {
     "karma": "^0.13.9",
     "karma-chrome-launcher": "^0.2.0",
-    "karma-dart": "^0.3.0"
+    "karma-dart": "^0.3.0",
+    "karma-junit-reporter": "~0.2.1"
   },
   "scripts": {
     "test": "karma start karma.conf.js --single-run"

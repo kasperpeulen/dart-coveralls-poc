@@ -1,6 +1,7 @@
 module.exports = function(config) {
   config.set({
     basePath: '.',
+    reporters: ['progress', 'junit'],
     frameworks: ['dart-unittest'],
 
     files: [
@@ -11,14 +12,21 @@ module.exports = function(config) {
 
 
     autoWatch: true,
-    captureTimeout: 60000,
-    browserNoActivityTimeout: 300000,
+    captureTimeout: 120000,
+    browserNoActivityTimeout: 1500000,
 
     plugins: [
       'karma-dart',
-      'karma-chrome-launcher'
+      'karma-chrome-launcher',
+      'karma-junit-reporter'
     ],
 
-    browsers: ['Dartium']
+    browsers: ['Dartium'],
+
+    junitReporter: {
+      outputFile: 'shippable/testresults/unit.xml',
+      suite: 'unit'
+    }
+
   });
 };
