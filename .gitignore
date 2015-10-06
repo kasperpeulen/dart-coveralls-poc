@@ -4,5 +4,7 @@
 .packages
 .pub/
 build/
+node_modules/
 packages
 pubspec.lock
+npm-debug.log

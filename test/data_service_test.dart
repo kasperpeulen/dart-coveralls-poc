@@ -1,23 +1,20 @@
-
-import 'package:unittest/html_config.dart';
-import 'package:angular2/angular2.dart';
-import 'package:angular2/test_lib.dart';
-
+import 'package:angular2/test.dart';
 import 'package:coveralls/data_service.dart';
-
 
 main() {
 
-  useHtmlConfiguration();
+  testSetup();
+
+  
   //describe should be added in final release
-  // describe("DataService", () {
+   describe("DataService", () {
 
       beforeEachBindings(() => [
-        bind(DataService)
+        DataService
       ]);
 
     
-  //   describe("data", () {
+    describe("data", () {
 
       it("should have the initial length of 3", () {
         inject([DataService], (dataService) {
@@ -25,9 +22,9 @@ main() {
         });
       });
       
-  //   });
+    });
 
-  //   describe("getMoreData", () {
+    describe("getMoreData", () {
 
       it("should have the initial length of 3", () {
         inject([DataService], (dataService) {
@@ -41,10 +38,10 @@ main() {
           expect(1).toEqual(2);
       });
       
-  //   });
+    });
 
     
-  // });
+  });
 
 }
 

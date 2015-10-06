@@ -1,0 +1,18 @@
+# Language setting
+language: node_js
+
+# Version number
+node_js:
+  - 0.10.25
+
+before_install:
+  - export DISPLAY=:99.0
+
+# Create directories for test and coverage reports
+#before_script:
+#  - mkdir -p shippable/testresults
+#  - mkdir -p shippable/codecoverage
+
+# Running the tests with grunt
+script:
+  - ./tool/shippable.sh
