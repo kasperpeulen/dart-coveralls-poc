@@ -7,9 +7,10 @@ node_js:
 
 before_install:
   - export DISPLAY=:99.0
+  - chmod +x ./tool/shippable.sh
 
 # Create directories for test and coverage reports
-#before_script:
+# before_script:
 #  - mkdir -p shippable/testresults
 #  - mkdir -p shippable/codecoverage
 
