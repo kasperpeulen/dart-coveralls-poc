@@ -4,5 +4,7 @@
 .packages
 .pub/
 build/
+node_modules/
+shippable/
 packages
 pubspec.lock
