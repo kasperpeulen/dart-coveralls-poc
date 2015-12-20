@@ -1,6 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/avoivo/dart-coveralls-poc.svg?label=ready&title=Ready)](http://waffle.io/avoivo/dart-coveralls-poc)
-[![Build Status](https://travis-ci.org/avoivo/dart-coveralls-poc.svg?branch=master)](https://travis-ci.org/avoivo/dart-coveralls-poc)
-[![Coverage Status](https://coveralls.io/repos/avoivo/dart-coveralls-poc/badge.svg?branch=master&service=github)](https://coveralls.io/github/avoivo/dart-coveralls-poc?branch=master)
+[![Build Status](https://travis-ci.org/kasperpeulen/dart-coveralls-poc.svg?branch=master)](https://travis-ci.org/kasperpeulen/dart-coveralls-poc)
+[![Coverage Status](https://coveralls.io/repos/kasperpeulen/dart-coveralls-poc/badge.svg?branch=master&service=github)](https://coveralls.io/github/kasperpeulen/dart-coveralls-poc?branch=master)
 
 # Uber-simple web app
 
